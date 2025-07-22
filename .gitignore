@@ -1,0 +1,43 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.log
+*.pdb
+*.scc
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.lib
+*.exp
+*.ncb
+*.opensdf
+*.sdf
+*.cache
+*.VC.db
+
+# Packages
+packages/
+*.nupkg
+# NuGet
+.nuget/nuget.g.props
+.nuget/nuget.g.targets
+
+# Rider
+.idea/
+
+# Azure App Service
+appsettings.json
+
+# Other
+*~
+*.bak
+*.userprefs
+*.pid
+*.seed
+*.vstc
