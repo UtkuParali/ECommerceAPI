@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ECommerceAPI.Application.Features.Products;
+﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using ECommerceAPI.Application.Features.Products.CreateProduct;
+using ECommerceAPI.Application.Features.Products.GetAllProducts;
+using Asp.Versioning;
 
 namespace ECommerceAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
