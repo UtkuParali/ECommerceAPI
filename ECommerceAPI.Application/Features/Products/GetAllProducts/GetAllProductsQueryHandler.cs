@@ -20,7 +20,7 @@ namespace ECommerceAPI.Application.Features.Products.GetAllProducts
 
         public async Task<List<GetAllProductsQueryResponse>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
-            var products = await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync(cancellationToken);
 
             var response = products.Select(p => new GetAllProductsQueryResponse(
                 p.Id,

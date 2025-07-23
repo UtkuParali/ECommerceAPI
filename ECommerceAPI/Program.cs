@@ -1,6 +1,8 @@
 using ECommerceAPI.Application;
 using ECommerceAPI.Infrastructure;
 using Asp.Versioning;
+using FluentValidation;
+using ECommerceAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,7 @@ builder.Services.AddApiVersioning(options =>
         options.GroupNameFormat = "'v'VVV"; options.SubstituteApiVersionInUrl = true; 
     });
 
+
 var app = builder.Build();
 
 
@@ -38,6 +41,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ValidationExceptionHandler>();
 
 app.UseAuthorization();
 

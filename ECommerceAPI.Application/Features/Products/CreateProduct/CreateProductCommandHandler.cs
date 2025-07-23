@@ -28,7 +28,7 @@ namespace ECommerceAPI.Application.Features.Products.CreateProduct
                 request.Price,
                 request.Stock);
 
-            await _productRepository.AddAsync(newProduct);
+            await _productRepository.AddAsync(newProduct,cancellationToken);
 
             var response = new CreateProductCommandResponse(
                 newProduct.Id,

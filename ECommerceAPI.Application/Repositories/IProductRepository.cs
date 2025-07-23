@@ -9,7 +9,7 @@ namespace ECommerceAPI.Application.Repositories
 {
     public interface IProductRepository
     {
-        Task AddAsync(Product product);
-        Task <List<Product>> GetAllAsync();
+        Task AddAsync(Product product, CancellationToken cancellationToken);
+        Task <List<Product>> GetAllAsync(CancellationToken cancellationToken);
     }
 }
