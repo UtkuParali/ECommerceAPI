@@ -1,14 +1,15 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using ECommerceAPI.Application.Exceptions;
 
 namespace ECommerceAPI.Middleware
 {
-    public class ValidationExceptionHandler
+    public class GlobalExceptionHandler
     {
         private readonly RequestDelegate _next;
 
-        public ValidationExceptionHandler(RequestDelegate next)
+        public GlobalExceptionHandler(RequestDelegate next)
         {
             _next = next;
         }
@@ -34,6 +35,20 @@ namespace ECommerceAPI.Middleware
                     {
                         {"errors", ex.Errors.Select(e => new{e.PropertyName, e.ErrorMessage}) }
                     }
+                };
+
+                await context.Response.WriteAsJsonAsync(problemDetails);
+            }
+            catch (ProductNotFoundException ex)
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                context.Response.ContentType = "application/problem+json";
+                var problemDetails = new ProblemDetails
+                {
+                    Status = (int)HttpStatusCode.NotFound,
+                    Type = "https://httpstatuses.com/404",
+                    Title = "Resource Not Found",
+                    Detail = ex.Message
                 };
 
                 await context.Response.WriteAsJsonAsync(problemDetails);

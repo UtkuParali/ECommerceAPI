@@ -11,5 +11,8 @@ namespace ECommerceAPI.Application.Repositories
     {
         Task AddAsync(Product product, CancellationToken cancellationToken);
         Task <List<Product>> GetAllAsync(CancellationToken cancellationToken);
+        Task<Product> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+        Task<Product> UpdateAsync(Product product, CancellationToken cancellationToken);
+        Task<Product> RemoveAsync(Product product, CancellationToken cancellationToken);
     }
 }

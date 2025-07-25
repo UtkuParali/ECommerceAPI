@@ -42,7 +42,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<ValidationExceptionHandler>();
+app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseAuthorization();
 

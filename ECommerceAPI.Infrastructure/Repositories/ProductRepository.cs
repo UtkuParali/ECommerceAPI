@@ -27,5 +27,24 @@ namespace ECommerceAPI.Infrastructure.Repositories
         {
             return await _context.Products.ToListAsync(cancellationToken);
         }
+
+        public async Task<Product> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+        {
+            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
+        }
+
+        public async Task<Product> UpdateAsync(Product product, CancellationToken cancellationToken)
+        {
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync(cancellationToken);
+            return product;
+        }
+
+        public async Task<Product> RemoveAsync(Product product, CancellationToken cancellationToken)
+        {
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync(cancellationToken) ;
+            return product;
+        }
     }
 }
