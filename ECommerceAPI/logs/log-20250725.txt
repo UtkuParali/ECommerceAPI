@@ -1,0 +1,34 @@
+2025-07-25 17:33:08.476 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-25 17:33:08.510 +03:00 [INF] Tüm ürünler listesi isteniyor.
+2025-07-25 17:33:08.611 +03:00 [INF] Handler: Tüm ürünler veritabanından alınıyor.
+2025-07-25 17:33:08.893 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-25 17:33:10.259 +03:00 [INF] Handler: Tüm ürünler başarıyla getirildi.
+2025-07-25 17:33:10.261 +03:00 [INF] Tüm ürünler başarıyla listelendi.
+2025-07-25 17:34:35.717 +03:00 [INF] Yeni ürün oluşturma isteği anlındı: Mobile Phone
+2025-07-25 17:34:35.749 +03:00 [INF] Handler: Yeni ürün domain nesnesi oluşturuluyor. İsim: Mobile Phone
+2025-07-25 17:34:35.751 +03:00 [INF] Handler: Ürün veritabanına ekleniyor.
+2025-07-25 17:34:35.947 +03:00 [INF] Handler: Ürün "a18cde24-a7ae-4644-9d98-ff5a4cdcca04" başarıyla eklendi.
+2025-07-25 17:34:35.951 +03:00 [INF] Ürün "a18cde24-a7ae-4644-9d98-ff5a4cdcca04" başarıyla oluşturuldu
+2025-07-25 17:36:31.266 +03:00 [INF] Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" güncelleme isteği alındı.
+2025-07-25 17:36:31.278 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" Id ile güncellenmek üzere sorgulanıyor.
+2025-07-25 17:36:31.383 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" detayları güncelleniyor.
+2025-07-25 17:36:31.385 +03:00 [INF] Handler: Güncellenmiş ürün "2d3faeb3-4b18-45ea-899a-544998766c13" veritabanına kaydediliyor.
+2025-07-25 17:36:31.405 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" başarıyla güncellendi.
+2025-07-25 17:36:31.410 +03:00 [INF] Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" başarıyla güncellendi.
+2025-07-25 17:37:12.957 +03:00 [INF] Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" Id ile sorgulanıyor.
+2025-07-25 17:37:12.961 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" Id ile veritabanında sorgulanıyor.
+2025-07-25 17:37:12.964 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c13" Id ile başarıyla getirildi.
+2025-07-25 17:37:12.965 +03:00 [INF] Ürün {ProductId} Id ile başarıyla getirildi.
+2025-07-25 17:38:23.046 +03:00 [INF] Yeni ürün oluşturma isteği anlındı: string
+2025-07-25 17:38:23.049 +03:00 [INF] Handler: Yeni ürün domain nesnesi oluşturuluyor. İsim: string
+2025-07-25 17:38:23.049 +03:00 [INF] Handler: Ürün veritabanına ekleniyor.
+2025-07-25 17:38:23.055 +03:00 [INF] Handler: Ürün "c55d2b82-494c-4335-b051-b46968c78c58" başarıyla eklendi.
+2025-07-25 17:38:23.057 +03:00 [INF] Ürün "c55d2b82-494c-4335-b051-b46968c78c58" başarıyla oluşturuldu
+2025-07-25 17:38:41.667 +03:00 [INF] Ürün "c55d2b82-494c-4335-b051-b46968c78c58" silme isteği alındı.
+2025-07-25 17:38:41.672 +03:00 [INF] Handler: Ürün {ProductId} Id ile silinmek üzere sorgulanıyor.
+2025-07-25 17:38:41.675 +03:00 [INF] Handler: Ürün {ProductId} veritabanından siliniyor.
+2025-07-25 17:38:41.684 +03:00 [INF] Handler: Ürün "c55d2b82-494c-4335-b051-b46968c78c58" başarıyla silindi. Başarı durumu: true
+2025-07-25 17:38:41.686 +03:00 [INF] Ürün "c55d2b82-494c-4335-b051-b46968c78c58" başarıyla silindi. Başaru durumu: true
+2025-07-25 17:38:57.749 +03:00 [INF] Ürün "2d3faeb3-4b18-45ea-899a-544998766c15" Id ile sorgulanıyor.
+2025-07-25 17:38:57.752 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c15" Id ile veritabanında sorgulanıyor.
+2025-07-25 17:38:57.755 +03:00 [INF] Handler: Ürün "2d3faeb3-4b18-45ea-899a-544998766c15" Id ile bulunamadı.
