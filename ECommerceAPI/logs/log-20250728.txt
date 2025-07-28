@@ -20,3 +20,25 @@
 2025-07-28 12:43:29.698 +03:00 [INF] Handler: Tüm ürünler sayfa 2, boyut 2 ile sorgulanıyor.
 2025-07-28 12:43:29.700 +03:00 [INF] Handler: Sayfa 2 için 2 ürün getirildi. Toplam ürün: 6
 2025-07-28 12:43:29.703 +03:00 [INF] Tüm ürünler başarıyla listelendi. Toplam: 6
+2025-07-28 12:54:55.186 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-28 12:54:55.221 +03:00 [INF] Tüm ürünler listesi isteniyor (Sayfa: 3, Boyut: 2).
+2025-07-28 12:54:55.342 +03:00 [INF] Handler: Tüm ürünler sayfa 3, boyut 2 ile sorgulanıyor.
+2025-07-28 12:54:55.627 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-28 12:54:57.011 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-07-28 12:54:57.014 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-07-28 12:54:57.066 +03:00 [INF] Handler: Sayfa 3 için 0 ürün getirildi. Toplam ürün: 6
+2025-07-28 12:54:57.068 +03:00 [INF] Tüm ürünler başarıyla listelendi. Toplam: 6
+2025-07-28 12:55:02.050 +03:00 [INF] Tüm ürünler listesi isteniyor (Sayfa: 2, Boyut: 2).
+2025-07-28 12:55:02.054 +03:00 [INF] Handler: Tüm ürünler sayfa 2, boyut 2 ile sorgulanıyor.
+2025-07-28 12:55:02.096 +03:00 [INF] Handler: Sayfa 2 için 2 ürün getirildi. Toplam ürün: 6
+2025-07-28 12:55:02.098 +03:00 [INF] Tüm ürünler başarıyla listelendi. Toplam: 6
+2025-07-28 16:51:02.463 +03:00 [INF] Giriş denemesi: admin
+2025-07-28 16:51:02.535 +03:00 [INF] Giriş başarılı: admin
+2025-07-28 16:51:21.605 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-28 16:51:21.608 +03:00 [INF] Tüm ürünler listesi isteniyor (Sayfa: 0, Boyut: 10).
+2025-07-28 16:51:21.730 +03:00 [INF] Handler: Tüm ürünler sayfa 0, boyut 10 ile sorgulanıyor.
+2025-07-28 16:51:22.023 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-28 16:51:30.166 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-07-28 16:51:30.168 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-07-28 16:51:30.256 +03:00 [INF] Handler: Sayfa 0 için 6 ürün getirildi. Toplam ürün: 6
+2025-07-28 16:51:30.258 +03:00 [INF] Tüm ürünler başarıyla listelendi. Toplam: 6

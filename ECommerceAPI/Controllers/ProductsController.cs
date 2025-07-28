@@ -7,12 +7,14 @@ using ECommerceAPI.Application.Features.Products.GetProductById;
 using ECommerceAPI.Application.Features.Products.UpdateProduct;
 using ECommerceAPI.Application.Features.Products.RemoveProduct;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ECommerceAPI.Controllers
 {
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
