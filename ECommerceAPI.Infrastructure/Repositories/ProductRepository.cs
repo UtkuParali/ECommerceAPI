@@ -17,15 +17,20 @@ namespace ECommerceAPI.Infrastructure.Repositories
         {
             _context = context;
         }
+        public async Task<List<Product>> GetAllAsync(int page, int size, CancellationToken cancellationToken)
+        {
+            return await _context.Products.Skip(page * size).Take(size).ToListAsync(cancellationToken);
+        }
+
+        public async Task<int> GetTotalProductCountAsync(CancellationToken cancellationToken)
+        {
+            return await _context.Products.CountAsync(cancellationToken);
+        }
+
         public async Task AddAsync(Product product, CancellationToken cancellationToken)
         {
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync(cancellationToken);
-        }
-
-        public async Task<List<Product>> GetAllAsync(CancellationToken cancellationToken)
-        {
-            return await _context.Products.ToListAsync(cancellationToken);
         }
 
         public async Task<Product> GetByIdAsync(Guid id, CancellationToken cancellationToken)
@@ -46,5 +51,7 @@ namespace ECommerceAPI.Infrastructure.Repositories
             await _context.SaveChangesAsync(cancellationToken) ;
             return product;
         }
+
+        
     }
 }

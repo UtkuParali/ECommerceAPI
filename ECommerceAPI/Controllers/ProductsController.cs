@@ -25,12 +25,12 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllProducts()
+        public async Task<IActionResult> GetAllProducts([FromQuery] int page = 0, [FromQuery] int size = 10)
         {
-            _logger.LogInformation("Tüm ürünler listesi isteniyor.");
-            var query = new GetAllProductsQuery();
+            _logger.LogInformation("Tüm ürünler listesi isteniyor (Sayfa: {Page}, Boyut: {Size}).", page,size);
+            var query = new GetAllProductsQuery(page, size);
             var response = await _mediator.Send(query);
-            _logger.LogInformation("Tüm ürünler başarıyla listelendi.");
+            _logger.LogInformation("Tüm ürünler başarıyla listelendi. Toplam: {TotalCount}",response.TotalCount);
             return Ok(response);
         }
 

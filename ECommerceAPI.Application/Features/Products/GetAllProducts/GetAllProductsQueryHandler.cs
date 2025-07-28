@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ECommerceAPI.Application.Features.Products.GetAllProducts
 {
-    public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, List<GetAllProductsQueryResponse>>
+    public class GetAllProductsQueryHandler : IRequestHandler <GetAllProductsQuery, GetAllProductsQueryResponse>
     {
 
         private readonly IProductRepository _productRepository;
@@ -21,21 +21,19 @@ namespace ECommerceAPI.Application.Features.Products.GetAllProducts
             _logger = logger;
         }
 
-        public async Task<List<GetAllProductsQueryResponse>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+        public async Task<GetAllProductsQueryResponse> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Handler: Tüm ürünler veritabanından alınıyor.");
-            var products = await _productRepository.GetAllAsync(cancellationToken);
-            
-            _logger.LogInformation("Handler: Tüm ürünler başarıyla getirildi.");
-            var response = products.Select(p => new GetAllProductsQueryResponse(
-                p.Id,
-                p.Name,
-                p.Description,
-                p.Price,
-                p.Stock
-                )).ToList();
+            _logger.LogInformation("Handler: Tüm ürünler sayfa {Page}, boyut {Size} ile sorgulanıyor.", request.Page, request.Size);
 
-            return response;
+            var totalCount = await _productRepository.GetTotalProductCountAsync(cancellationToken);
+            
+            var products = await _productRepository.GetAllAsync(request.Page, request.Size, cancellationToken);
+
+            var productDtos = products.Select(p => new ProductDto(p.Id, p.Name, p.Description, p.Price, p.Stock)).ToList();
+            
+            _logger.LogInformation("Handler: Sayfa {Page} için {ProductCount} ürün getirildi. Toplam ürün: {TotalCount}", request.Page, productDtos.Count, totalCount);
+
+            return new GetAllProductsQueryResponse(productDtos, totalCount, request.Page, request.Size);
         }
     }
 }

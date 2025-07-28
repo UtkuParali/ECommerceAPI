@@ -9,8 +9,9 @@ namespace ECommerceAPI.Application.Repositories
 {
     public interface IProductRepository
     {
+        Task<List<Product>> GetAllAsync(int page, int size, CancellationToken cancellationToken);
+        Task<int> GetTotalProductCountAsync(CancellationToken cancellationToken);
         Task AddAsync(Product product, CancellationToken cancellationToken);
-        Task <List<Product>> GetAllAsync(CancellationToken cancellationToken);
         Task<Product> GetByIdAsync(Guid id, CancellationToken cancellationToken);
         Task<Product> UpdateAsync(Product product, CancellationToken cancellationToken);
         Task<Product> RemoveAsync(Product product, CancellationToken cancellationToken);
